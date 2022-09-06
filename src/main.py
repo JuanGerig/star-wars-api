@@ -65,7 +65,7 @@ def add_favorites(user_id = None, nature = None):
             
 #Delete  
 @app.route("/favorites/<int:favorites_id>", methods=['DELETE'])
-def delete_favorite(favorites_id = None):
+def delete_favorite(favorite_id = None):
     if request.method == 'DELETE':
         favorites = Favorites.query.get(favorites_id)
         if favorites is None:
