@@ -88,7 +88,7 @@ def delete_favorite(favorite_id = None):
 def people_id(user_id = None):
     if request.method == 'GET':
         if user_id is None:
-            people = People()
+            people = Peoples()
             people = people.query.all()
             
             return jsonify(list(map(lambda item: item.serialize(), people))) , 200
